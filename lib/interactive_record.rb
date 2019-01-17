@@ -6,7 +6,8 @@ class InteractiveRecord
     ATTRIBUTES 
   end
   
-  
+  def.self.extended(base)
+    base.attributes.keys
   
   def self.table_name
     self.to_s.downcase.pluralize
