@@ -8,4 +8,6 @@ class Student < InteractiveRecord
     :name => "TEXT",
     :grade => "INTEGER"
   }
+  
+  
 end
