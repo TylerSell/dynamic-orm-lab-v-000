@@ -13,7 +13,8 @@ class InteractiveRecord
     table_col = DB[:conn].execute("PRAGMA table_info(#{table.name})")
     col_names = []
     
-    table_col
+    table_col.each do |col|
+      col_names << col
   end
   
   def table_names_for_insert
