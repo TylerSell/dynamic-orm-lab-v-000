@@ -66,7 +66,7 @@ class InteractiveRecord
     value_name = attribute.values[0]
 
     sql = <<-SQL
-      SELECT * FROM #{table_name}
+      SELECT * FROM #{table_names_for_insert}
       WHERE #{column_name} = ?
     SQL
 
