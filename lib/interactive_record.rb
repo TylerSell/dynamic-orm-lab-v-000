@@ -67,9 +67,9 @@ class InteractiveRecord
 
     sql = <<-SQL
       SELECT * FROM #{table_names_for_insert}
-      WHERE #{column_name} = ?
+      WHERE #{column_name} = #{value_name}
     SQL
 
-    DB[:conn].execute(sql, value_name)
+    DB[:conn].execute(sql)
   end
 end
