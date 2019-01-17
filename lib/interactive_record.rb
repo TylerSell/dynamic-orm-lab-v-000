@@ -5,9 +5,9 @@ class InteractiveRecord
   
   
   
-  def initialize(hash={})
-    hash.each do |key, value|
-      self.send("#{key}=, value")
+  def initialize(options={})
+    options.each do |property, value|
+      self.send("#{property}=", value)
     end
   end
   
