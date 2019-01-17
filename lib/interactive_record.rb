@@ -16,6 +16,8 @@ class InteractiveRecord
     table_col.each do |col|
       col_names << col["name"]
     end
+    
+    col_names.
   end
   
   def table_names_for_insert
