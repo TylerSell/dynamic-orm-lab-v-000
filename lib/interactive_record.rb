@@ -56,14 +56,14 @@ class InteractiveRecord
   
   def self.find_by_name(name)
     sql = <<-SQL
-      SELECT * FROM #{table_name_for_insert}
+      SELECT * FROM #{self.table_name}
       WHERE name = #{name}
     SQL
     
     DB[:conn].execute(sql)
   end
   
-  def self.find_by 
+  def self.find_by
     column_name = attribute.keys[0].to_s
     value_name = attribute.values[0]
 
