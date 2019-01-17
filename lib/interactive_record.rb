@@ -64,8 +64,8 @@ class InteractiveRecord
   end
   
   def self.find_by(hash)
-    column_name = attribute.keys[0].to_s
-    value_name = attribute.values[0]
+    column_name = hash.keys[0].to_s
+    value_name = hash.values[0]
 
     sql = <<-SQL
       SELECT * FROM #{table_name_for_insert}
