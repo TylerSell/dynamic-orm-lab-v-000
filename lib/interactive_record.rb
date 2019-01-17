@@ -7,7 +7,7 @@ class InteractiveRecord
   end
   
   def.self.extended(base)
-    base.attributes.keys
+    base.attributes.keys.each do |attribute_name|
   
   def self.table_name
     self.to_s.downcase.pluralize
