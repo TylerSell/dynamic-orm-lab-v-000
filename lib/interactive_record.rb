@@ -68,7 +68,7 @@ class InteractiveRecord
     value_name = hash.values[0]
 
     sql = <<-SQL
-      SELECT * FROM #{table_name_for_insert}
+      SELECT * FROM #{self.table_name}
       WHERE #{column_name} = #{value_name}
     SQL
 
