@@ -11,6 +11,9 @@ class InteractiveRecord
     DB[:conn].results_as_hash = true 
     
     table_col = DB[:conn].execute("PRAGMA table_info(#{table.name})")
+    col_names = []
+    
+    table_col
   end
   
   def table_names_for_insert
