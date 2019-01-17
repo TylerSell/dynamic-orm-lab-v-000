@@ -17,7 +17,7 @@ class InteractiveRecord
       col_names << col["name"]
     end
     
-    col_names.
+    col_names.compact
   end
   
   def table_names_for_insert
