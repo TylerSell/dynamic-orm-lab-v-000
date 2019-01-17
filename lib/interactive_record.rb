@@ -8,6 +8,9 @@ class InteractiveRecord
   
   def.self.extended(base)
     base.attributes.keys.each do |attribute_name|
+      attr_accessor attribute_name
+    end
+  end
   
   def self.table_name
     self.to_s.downcase.pluralize
