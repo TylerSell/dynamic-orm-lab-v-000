@@ -8,7 +8,9 @@ class InteractiveRecord
   end
   
   def self.column_names
-    DB[:conn].execute()
+    DB[:conn].results_as_hash = true 
+    
+    
   end
   
   def table_names_for_insert
