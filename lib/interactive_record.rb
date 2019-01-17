@@ -3,6 +3,9 @@ require 'active_support/inflector'
 
 class InteractiveRecord
   
+  def initialize(hash={})
+    hash.each do |key, value|
+      
   def self.table_name
     self.to_s.downcase.pluralize
   end
