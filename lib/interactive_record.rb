@@ -2,22 +2,13 @@ require_relative "../config/environment.rb"
 require 'active_support/inflector'
 
 class InteractiveRecord
-  def self.attributes
-    self::ATTRIBUTES 
-  end
-  
-  def.self.extended(base)
-    base.attributes.keys.each do |attribute_name|
-      attr_accessor attribute_name
-    end
-  end
   
   def self.table_name
     self.to_s.downcase.pluralize
   end
   
   def self.column_names
-    
+    DB[:conn].execute()
   end
   
   def table_names_for_insert
