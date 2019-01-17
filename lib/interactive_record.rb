@@ -23,6 +23,20 @@ class InteractiveRecord
   end
   
   def save
+    sql = <<-SQL
+    
+    
+    SQL
+    
+    DB[:conn].execute(sql)
+    @
+  end
+  
+  def self.find_by_name
+    
+  end
+  
+  def self.find_by 
     
   end
 end
