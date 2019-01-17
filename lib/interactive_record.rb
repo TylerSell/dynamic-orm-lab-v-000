@@ -5,7 +5,7 @@ class InteractiveRecord
   
   def initialize(hash={})
     hash.each do |key, value|
-      self.send
+      self.send("#{key}=, value")
   def self.table_name
     self.to_s.downcase.pluralize
   end
